@@ -1,0 +1,167 @@
+<svg viewBox="0 0 2400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .icon-bg { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-primary { stroke: #2D7F5E; }
+      .icon-success { stroke: #4CAF50; }
+      .icon-pending { stroke: #C97F3A; }
+      .icon-error { stroke: #DC3545; }
+      .icon-label { font-family: 'Inter', sans-serif; font-size: 12px; fill: #333; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- ROW 1: ORDER STATE ICONS -->
+
+  <!-- 1. REQUESTED (hourglass) -->
+  <g transform="translate(50, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-pending" fill="#FFF9F0" stroke-width="2"/>
+    <path d="M 15 10 L 35 10 L 32 25 L 35 40 L 15 40 L 18 25 Z" class="icon-bg icon-pending"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">requested</text>
+  </g>
+
+  <!-- 2. ACCEPTED (checkmark) -->
+  <g transform="translate(150, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-success" fill="#F0F8F0"/>
+    <polyline points="16,25 22,32 34,18" class="icon-bg icon-success"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">accepted</text>
+  </g>
+
+  <!-- 3. CHECKING (phone/call) -->
+  <g transform="translate(250, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-primary" fill="#F0F5F2"/>
+    <rect x="14" y="12" width="22" height="26" rx="2" class="icon-bg icon-primary"/>
+    <line x1="18" y1="18" x2="32" y2="18" class="icon-bg icon-primary"/>
+    <circle cx="25" cy="30" r="2" fill="#2D7F5E"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">checking</text>
+  </g>
+
+  <!-- 4. SEALED (lock/seal) -->
+  <g transform="translate(350, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-success" fill="#F0F8F0"/>
+    <circle cx="25" cy="22" r="8" class="icon-bg icon-success"/>
+    <path d="M 20 22 L 30 22" class="icon-bg icon-success"/>
+    <path d="M 22 30 L 28 30 L 28 35 Q 25 37 22 35 Z" class="icon-bg icon-success"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">sealed</text>
+  </g>
+
+  <!-- 5. DELIVERED (box/checkmark) -->
+  <g transform="translate(450, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-success" fill="#F0F8F0"/>
+    <rect x="13" y="16" width="24" height="18" rx="1" class="icon-bg icon-success"/>
+    <polyline points="18,27 22,31 32,21" class="icon-bg icon-success" stroke-width="2"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">delivered</text>
+  </g>
+
+  <!-- 6. CONFIRMED (checkmark in circle) -->
+  <g transform="translate(550, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-success" fill="#F0F8F0"/>
+    <circle cx="25" cy="25" r="12" class="icon-bg icon-success"/>
+    <polyline points="19,25 22,28 31,19" class="icon-bg icon-success" stroke-width="2"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">confirmed</text>
+  </g>
+
+  <!-- 7. DISPUTED (alert/flag) -->
+  <g transform="translate(650, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-error" fill="#FFF0F0"/>
+    <path d="M 25 15 L 30 20 L 30 35 L 20 35 L 20 20 Z" class="icon-bg icon-error"/>
+    <circle cx="25" cy="28" r="1.5" fill="#DC3545"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">disputed</text>
+  </g>
+
+  <!-- 8. RELEASED (money/complete) -->
+  <g transform="translate(750, 50)">
+    <circle cx="25" cy="25" r="20" class="icon-bg icon-success" fill="#F0F8F0"/>
+    <path d="M 22 18 L 28 18 L 28 32 L 22 32 Z" class="icon-bg icon-success"/>
+    <polyline points="20,22 25,27 30,22" class="icon-bg icon-success" stroke-width="1.5"/>
+    <text x="25" y="65" class="icon-label" text-anchor="middle">released</text>
+  </g>
+
+  <!-- ROW 2: STATUS CHIPS -->
+
+  <!-- Pending chip -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="100" height="36" rx="18" fill="#FFF9F0" stroke="#C97F3A" stroke-width="1.5"/>
+    <circle cx="12" cy="18" r="4" fill="#C97F3A"/>
+    <text x="55" y="22" font-family="Inter" font-size="13" font-weight="600" fill="#C97F3A" text-anchor="middle">Pending</text>
+  </g>
+
+  <!-- Success chip -->
+  <g transform="translate(170, 150)">
+    <rect x="0" y="0" width="100" height="36" rx="18" fill="#F0F8F0" stroke="#4CAF50" stroke-width="1.5"/>
+    <circle cx="12" cy="18" r="4" fill="#4CAF50"/>
+    <text x="55" y="22" font-family="Inter" font-size="13" font-weight="600" fill="#4CAF50" text-anchor="middle">Confirmed</text>
+  </g>
+
+  <!-- Error chip -->
+  <g transform="translate(290, 150)">
+    <rect x="0" y="0" width="100" height="36" rx="18" fill="#FFF0F0" stroke="#DC3545" stroke-width="1.5"/>
+    <circle cx="12" cy="18" r="4" fill="#DC3545"/>
+    <text x="55" y="22" font-family="Inter" font-size="13" font-weight="600" fill="#DC3545" text-anchor="middle">Disputed</text>
+  </g>
+
+  <!-- Neutral chip -->
+  <g transform="translate(410, 150)">
+    <rect x="0" y="0" width="100" height="36" rx="18" fill="#F5F5F5" stroke="#999" stroke-width="1.5"/>
+    <circle cx="12" cy="18" r="4" fill="#999"/>
+    <text x="55" y="22" font-family="Inter" font-size="13" font-weight="600" fill="#333" text-anchor="middle">Expired</text>
+  </g>
+
+  <!-- ROW 3: MICRO ILLUSTRATIONS -->
+
+  <!-- Hands sealing (seller + agent) -->
+  <g transform="translate(50, 250)">
+    <circle cx="40" cy="40" r="35" fill="none" stroke="#E8E8E8" stroke-width="1"/>
+    <!-- Left hand -->
+    <path d="M 20 35 L 18 28 M 20 35 L 20 26 M 20 35 L 22 26 M 20 35 L 25 28" stroke="#2D7F5E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Parcel -->
+    <rect x="25" y="32" width="20" height="16" rx="1" fill="none" stroke="#2D7F5E" stroke-width="2"/>
+    <!-- Right hand -->
+    <path d="M 60 35 L 62 28 M 60 35 L 60 26 M 60 35 L 58 26 M 60 35 L 55 28" stroke="#2D7F5E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="90" font-family="Inter" font-size="11" font-weight="600" fill="#333" text-anchor="middle">Hands sealing</text>
+  </g>
+
+  <!-- Phone call (buyer) -->
+  <g transform="translate(180, 250)">
+    <circle cx="40" cy="40" r="35" fill="none" stroke="#E8E8E8" stroke-width="1"/>
+    <!-- Phone frame -->
+    <rect x="25" y="20" width="30" height="40" rx="2" fill="none" stroke="#2D7F5E" stroke-width="2.5"/>
+    <!-- Screen content -->
+    <circle cx="40" cy="30" r="5" fill="#2D7F5E" opacity="0.3"/>
+    <line x1="28" y1="40" x2="52" y2="40" stroke="#2D7F5E" stroke-width="1.5" opacity="0.3"/>
+    <line x1="28" y1="45" x2="52" y2="45" stroke="#2D7F5E" stroke-width="1.5" opacity="0.3"/>
+    <text x="40" y="90" font-family="Inter" font-size="11" font-weight="600" fill="#333" text-anchor="middle">Buyer approval</text>
+  </g>
+
+  <!-- Parcel in transit (truck/route) -->
+  <g transform="translate(310, 250)">
+    <circle cx="40" cy="40" r="35" fill="none" stroke="#E8E8E8" stroke-width="1"/>
+    <!-- Parcel -->
+    <rect x="18" y="32" width="22" height="18" rx="1" fill="none" stroke="#2D7F5E" stroke-width="2.5"/>
+    <!-- Seal mark on parcel -->
+    <circle cx="40" cy="42" r="2.5" fill="#2D7F5E"/>
+    <!-- Arrow (motion) -->
+    <path d="M 48 42 L 58 42" stroke="#C97F3A" stroke-width="2.5" stroke-linecap="round"/>
+    <polyline points="58,42 54,39 54,45" fill="#C97F3A"/>
+    <text x="40" y="90" font-family="Inter" font-size="11" font-weight="600" fill="#333" text-anchor="middle">In transit</text>
+  </g>
+
+  <!-- Buyer receiving (hands accepting) -->
+  <g transform="translate(440, 250)">
+    <circle cx="40" cy="40" r="35" fill="none" stroke="#E8E8E8" stroke-width="1"/>
+    <!-- Parcel -->
+    <rect x="22" y="30" width="20" height="18" rx="1" fill="none" stroke="#2D7F5E" stroke-width="2.5"/>
+    <!-- Seal intact check -->
+    <circle cx="40" cy="40" r="3" fill="#2D7F5E"/>
+    <!-- Hands receiving -->
+    <path d="M 18 48 L 16 55 M 62 48 L 64 55" stroke="#4CAF50" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="90" font-family="Inter" font-size="11" font-weight="600" fill="#333" text-anchor="middle">Received intact</text>
+  </g>
+
+  <!-- Checkmark (final trust) -->
+  <g transform="translate(570, 250)">
+    <circle cx="40" cy="40" r="35" fill="none" stroke="#E8E8E8" stroke-width="1"/>
+    <circle cx="40" cy="40" r="20" fill="none" stroke="#4CAF50" stroke-width="2.5"/>
+    <polyline points="32,42 38,48 48,35" stroke="#4CAF50" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="90" font-family="Inter" font-size="11" font-weight="600" fill="#333" text-anchor="middle">Trust verified</text>
+  </g>
+</svg>

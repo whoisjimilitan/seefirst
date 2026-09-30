@@ -1,0 +1,46 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .badge-bg { fill: #2D7F5E; }
+      .badge-text { font-family: 'Fraunces', serif; font-weight: 700; fill: white; }
+      .badge-seal { fill: #C97F3A; }
+      .badge-check { stroke: white; stroke-width: 8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .badge-subtext { font-family: 'Inter', sans-serif; font-size: 24px; fill: #F5F1E8; }
+    </style>
+  </defs>
+
+  <!-- Main badge circle -->
+  <circle cx="300" cy="300" r="290" class="badge-bg"/>
+
+  <!-- Inner circle (frame) -->
+  <circle cx="300" cy="300" r="250" fill="none" stroke="white" stroke-width="4" opacity="0.3"/>
+
+  <!-- Seal icon (center) -->
+  <g transform="translate(300, 240)">
+    <!-- Outer seal circle -->
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#C97F3A" stroke-width="6"/>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#C97F3A" stroke-width="4"/>
+    <!-- Checkmark inside seal -->
+    <polyline points="-20,0 -5,18 25,-15" class="badge-check"/>
+    <!-- Number placeholder -->
+    <text x="0" y="95" class="badge-text" font-size="32" text-anchor="middle">SF</text>
+  </g>
+
+  <!-- Badge text -->
+  <text x="300" y="380" class="badge-text" font-size="48" text-anchor="middle">Verified Seller</text>
+
+  <!-- Subtext -->
+  <text x="300" y="430" class="badge-subtext" text-anchor="middle">SeeFirst Certified</text>
+
+  <!-- Bottom: Record link -->
+  <text x="300" y="510" font-family="Inter" font-size="18" fill="white" text-anchor="middle" font-weight="600">seefirst.com/r/seller-handle</text>
+
+  <!-- QR code placeholder (bottom right quadrant) -->
+  <g transform="translate(480, 480)">
+    <rect x="0" y="0" width="100" height="100" fill="white"/>
+    <!-- Simple QR grid pattern -->
+    <rect x="5" y="5" width="90" height="90" fill="none" stroke="#DDD" stroke-width="0.5"/>
+    <text x="50" y="55" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">QR</text>
+  </g>
+</svg>

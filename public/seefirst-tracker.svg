@@ -1,0 +1,103 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .tracker-line { stroke: #E8E8E8; stroke-width: 2; }
+      .tracker-line-active { stroke: #4CAF50; stroke-width: 3; }
+      .tracker-dot { r: 8; fill: #F5F1E8; stroke: #E8E8E8; stroke-width: 2; }
+      .tracker-dot-active { r: 8; fill: #4CAF50; stroke: #4CAF50; stroke-width: 2; }
+      .tracker-dot-current { r: 10; fill: #2D7F5E; stroke: #2D7F5E; }
+      .tracker-label { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; fill: #333; }
+      .tracker-label-active { font-weight: 700; fill: #2D7F5E; }
+      .tracker-subtext { font-family: 'Inter', sans-serif; font-size: 11px; fill: #666; }
+      .tracker-action { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; fill: #2D7F5E; }
+      .tracker-header { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; fill: #2D7F5E; }
+      .tracker-timeline { font-family: 'Inter', sans-serif; font-size: 11px; fill: #999; }
+    </style>
+  </defs>
+
+  <!-- TRACKER STATE: "Waiting for seller to visit agent" -->
+  <g id="tracker-state-1">
+    <!-- Header -->
+    <text x="50" y="50" class="tracker-header">Order Status</text>
+
+    <!-- Current state -->
+    <rect x="50" y="70" width="100%" height="1" fill="none"/>
+    <text x="50" y="100" class="tracker-label-active">Waiting for seller to visit agent</text>
+    <text x="50" y="120" class="tracker-subtext">Agent Ama · Kejetia Market, Kumasi</text>
+
+    <!-- Timeline -->
+    <g transform="translate(50, 160)">
+      <!-- Line connecting dots -->
+      <line x1="20" y1="40" x2="980" y2="40" class="tracker-line"/>
+      <line x1="20" y1="40" x2="200" y2="40" class="tracker-line-active"/>
+
+      <!-- Dots -->
+      <!-- 1. Paid -->
+      <circle cx="20" cy="40" class="tracker-dot-active"/>
+      <text x="20" y="75" class="tracker-label" text-anchor="middle">Paid</text>
+      <text x="20" y="90" class="tracker-subtext" text-anchor="middle">Done</text>
+
+      <!-- 2. Seller visiting (CURRENT) -->
+      <circle cx="200" cy="40" class="tracker-dot-current"/>
+      <text x="200" y="75" class="tracker-label-active" text-anchor="middle">Seller visit</text>
+      <text x="200" y="90" class="tracker-subtext" text-anchor="middle">In progress</text>
+
+      <!-- 3. Agent checking -->
+      <circle cx="380" cy="40" class="tracker-dot"/>
+      <text x="380" y="75" class="tracker-label" text-anchor="middle">Agent check</text>
+      <text x="380" y="90" class="tracker-subtext" text-anchor="middle">Waiting</text>
+
+      <!-- 4. Sealed & shipped -->
+      <circle cx="560" cy="40" class="tracker-dot"/>
+      <text x="560" y="75" class="tracker-label" text-anchor="middle">Sealed</text>
+      <text x="560" y="90" class="tracker-subtext" text-anchor="middle">Waiting</text>
+
+      <!-- 5. In transit -->
+      <circle cx="740" cy="40" class="tracker-dot"/>
+      <text x="740" y="75" class="tracker-label" text-anchor="middle">In transit</text>
+      <text x="740" y="90" class="tracker-subtext" text-anchor="middle">Waiting</text>
+
+      <!-- 6. Confirm receipt -->
+      <circle cx="920" cy="40" class="tracker-dot"/>
+      <text x="920" y="75" class="tracker-label" text-anchor="middle">Confirm</text>
+      <text x="920" y="90" class="tracker-subtext" text-anchor="middle">Waiting</text>
+    </g>
+
+    <!-- What to do next -->
+    <rect x="50" y="340" width="100%" height="80" rx="8" fill="#F0F5F2" stroke="#2D7F5E" stroke-width="1"/>
+    <text x="70" y="360" class="tracker-label">What's next</text>
+    <text x="70" y="385" class="tracker-action">The seller hasn't visited the agent yet.</text>
+    <text x="70" y="405" class="tracker-subtext">We're reaching out to them. Check back in a few hours, or we'll update you by WhatsApp.</text>
+
+    <!-- Timeline info -->
+    <text x="50" y="460" class="tracker-timeline">Days since order: 1 day</text>
+    <text x="50" y="480" class="tracker-timeline">Auto-release in: 4 days (if no issue raised)</text>
+  </g>
+
+  <!-- TRACKER STATE: "Agent calling you to approve" -->
+  <g id="tracker-state-2" transform="translate(0, 520)">
+    <!-- Current state -->
+    <text x="50" y="50" class="tracker-label-active">Agent is calling you to approve the item</text>
+    <text x="50" y="70" class="tracker-subtext">Join video call: [link button]</text>
+
+    <!-- Timeline (compact) -->
+    <g transform="translate(50, 110)">
+      <line x1="20" y1="20" x2="980" y2="20" class="tracker-line"/>
+      <line x1="20" y1="20" x2="380" y2="20" class="tracker-line-active"/>
+
+      <!-- Completed dots -->
+      <circle cx="20" cy="20" class="tracker-dot-active"/>
+      <circle cx="200" cy="20" class="tracker-dot-active"/>
+      <circle cx="380" cy="20" class="tracker-dot-current"/>
+      <circle cx="560" cy="20" class="tracker-dot"/>
+      <circle cx="740" cy="20" class="tracker-dot"/>
+      <circle cx="920" cy="20" class="tracker-dot"/>
+    </g>
+
+    <!-- Action button -->
+    <g transform="translate(50, 170)">
+      <rect x="0" y="0" width="150" height="44" rx="6" fill="#2D7F5E" stroke="none"/>
+      <text x="75" y="28" font-family="Inter" font-size="14" font-weight="700" fill="white" text-anchor="middle">Join call now</text>
+    </g>
+  </g>
+</svg>

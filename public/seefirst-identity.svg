@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- CSS Variables for identity system -->
+  <defs>
+    <style>
+      :root {
+        --sf-primary: #2D7F5E;
+        --sf-secondary: #F5F1E8;
+        --sf-accent: #C97F3A;
+        --sf-success: #4CAF50;
+        --sf-error: #DC3545;
+        --sf-neutral: #333333;
+      }
+      .wordmark { font-family: 'Fraunces', Georgia, serif; font-size: 96px; font-weight: 700; fill: #2D7F5E; letter-spacing: -2px; }
+      .seal-icon { fill: none; stroke: #2D7F5E; stroke-width: 8; }
+      .seal-number { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 24px; font-weight: 700; fill: #2D7F5E; }
+    </style>
+  </defs>
+
+  <!-- WORDMARK: SeeFirst -->
+  <g id="wordmark">
+    <text x="50" y="120" class="wordmark">SeeFirst</text>
+  </g>
+
+  <!-- SEAL ICON (16px and 32px compatible) -->
+  <g id="seal-icon-container" transform="translate(750, 50)">
+    <!-- Outer circle -->
+    <circle cx="60" cy="60" r="55" class="seal-icon" stroke-linejoin="round"/>
+    <!-- Inner circle -->
+    <circle cx="60" cy="60" r="40" class="seal-icon"/>
+    <!-- Checkmark -->
+    <polyline points="45,60 55,70 75,50" class="seal-icon" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Number placeholder -->
+    <text x="60" y="95" class="seal-number" text-anchor="middle">SF</text>
+  </g>
+
+  <!-- SEAL ICON - 32px version reference -->
+  <g id="seal-icon-32px" transform="translate(900, 50)">
+    <circle cx="30" cy="30" r="27.5" class="seal-icon"/>
+    <circle cx="30" cy="30" r="20" class="seal-icon"/>
+    <polyline points="22,30 27,35 37,25" class="seal-icon" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- FAVICON concept (16x16) -->
+  <g id="favicon" transform="translate(1050, 50) scale(0.5)">
+    <rect width="32" height="32" fill="#F5F1E8"/>
+    <circle cx="16" cy="16" r="14" class="seal-icon"/>
+    <circle cx="16" cy="16" r="10" class="seal-icon"/>
+    <polyline points="11,16 14,19 20,13" class="seal-icon" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- COLOUR PALETTE REFERENCE -->
+  <g id="palette" transform="translate(50, 180)">
+    <!-- Primary: Warm green -->
+    <rect width="60" height="60" fill="#2D7F5E"/>
+    <text x="30" y="35" font-family="Inter" font-size="11" fill="white" text-anchor="middle" font-weight="600">Primary</text>
+    <text x="30" y="48" font-family="Inter" font-size="10" fill="white" text-anchor="middle">#2D7F5E</text>
+
+    <!-- Secondary: Cream -->
+    <rect x="70" width="60" height="60" fill="#F5F1E8" stroke="#CCC" stroke-width="1"/>
+    <text x="100" y="35" font-family="Inter" font-size="11" fill="#333" text-anchor="middle" font-weight="600">Secondary</text>
+    <text x="100" y="48" font-family="Inter" font-size="10" fill="#666" text-anchor="middle">#F5F1E8</text>
+
+    <!-- Accent: Deep amber -->
+    <rect x="140" width="60" height="60" fill="#C97F3A"/>
+    <text x="170" y="35" font-family="Inter" font-size="11" fill="white" text-anchor="middle" font-weight="600">Accent</text>
+    <text x="170" y="48" font-family="Inter" font-size="10" fill="white" text-anchor="middle">#C97F3A</text>
+
+    <!-- Success: Bright green -->
+    <rect x="210" width="60" height="60" fill="#4CAF50"/>
+    <text x="240" y="35" font-family="Inter" font-size="11" fill="white" text-anchor="middle" font-weight="600">Success</text>
+    <text x="240" y="48" font-family="Inter" font-size="10" fill="white" text-anchor="middle">#4CAF50</text>
+
+    <!-- Error: Red -->
+    <rect x="280" width="60" height="60" fill="#DC3545"/>
+    <text x="310" y="35" font-family="Inter" font-size="11" fill="white" text-anchor="middle" font-weight="600">Error</text>
+    <text x="310" y="48" font-family="Inter" font-size="10" fill="white" text-anchor="middle">#DC3545</text>
+
+    <!-- Neutral: Dark grey -->
+    <rect x="350" width="60" height="60" fill="#333333"/>
+    <text x="380" y="35" font-family="Inter" font-size="11" fill="white" text-anchor="middle" font-weight="600">Neutral</text>
+    <text x="380" y="48" font-family="Inter" font-size="10" fill="white" text-anchor="middle">#333333</text>
+  </g>
+
+  <!-- TYPOGRAPHY REFERENCE -->
+  <g id="typography" transform="translate(50, 280)">
+    <text x="0" y="20" font-family="Fraunces, Georgia, serif" font-size="28" font-weight="700" fill="#2D7F5E">Fraunces 700 (Headings)</text>
+    <text x="0" y="55" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="400" fill="#333">Inter 400 (Body text)</text>
+    <text x="0" y="85" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#2D7F5E">Inter 700 (Emphasis)</text>
+  </g>
+</svg>
