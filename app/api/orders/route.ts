@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 // POST /api/orders - Create a new order from a request
 export async function POST(request: NextRequest) {
   try {
-    const { requestId, buyerPhone, itemName, price, _listingScreenshot } = await request.json()
+    const { requestId, buyerPhone, itemName, price } = await request.json()
 
     // Validate input
     if (!requestId || !buyerPhone || !itemName || !price) {
