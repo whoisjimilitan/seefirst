@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Safe area support for notch devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 text-center inline-block;
+}
+
+.btn-secondary {
+  @apply bg-light text-neutral px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all duration-200 text-center inline-block;
+}
+
+/* Hero image styles */
+.hero-image {
+  @apply w-full h-auto object-cover;
+}
+
+/* Responsive text sizing */
+@screen sm {
+  .h1 {
+    @apply text-3xl;
+  }
+  .h2 {
+    @apply text-xl;
+  }
+}
+
+@screen lg {
+  .h1 {
+    @apply text-4xl;
+  }
+  .h2 {
+    @apply text-2xl;
+  }
+}
